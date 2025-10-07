@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/models/cart.dart';
 import 'package:shop/models/product.dart';
-import 'package:shop/utils/app_routes.dart';
+
 
 class ProductItem extends StatelessWidget {
   const ProductItem({super.key});
@@ -35,7 +35,6 @@ class ProductItem extends StatelessWidget {
             trailing: IconButton(
               onPressed: () {
                 cart.addItem(product);
-                print(cart.itemsCount);
               },
               icon: Icon(Icons.shopping_cart),
               color: Theme.of(context).highlightColor,

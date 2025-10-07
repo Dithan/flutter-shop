@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/models/cart.dart';
 import 'package:shop/models/product_list.dart';
-import 'package:shop/screens/cart_page.dart';
-import 'package:shop/screens/product_detail_page.dart';
-import 'package:shop/screens/products_overview_page.dart';
 import 'package:shop/utils/app_routes.dart';
 
 void main() {

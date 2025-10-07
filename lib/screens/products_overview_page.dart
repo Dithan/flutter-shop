@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/components/badge_cart.dart';
 import 'package:shop/components/product_grid.dart';
 import 'package:shop/models/cart.dart';
-import 'package:shop/models/product_list.dart';
-import 'package:shop/screens/cart_page.dart';
-import 'package:shop/utils/app_routes.dart';
-
 enum FilterOptions {
   Favorite,
   All,
@@ -31,14 +28,7 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
           Consumer<Cart>(
             child: IconButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => CartPage(),
-                  ),
-                );
-
-                Navigator.of(context).pushNamed(AppRoutes.CART);
+                context.push('/cart-page');
               },
               icon: Icon(Icons.shopping_cart),
             ),
