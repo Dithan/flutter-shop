@@ -8,7 +8,7 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Cart cart = Provider.of(context, listen: false);
+    final Cart cart = Provider.of(context);
     final itemsCart = cart.items.values.toList();
 
     return Scaffold(
@@ -18,7 +18,7 @@ class CartPage extends StatelessWidget {
       body: Column(
         children: [
           Card(
-            margin: EdgeInsets.all(25),
+            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 25),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
               child: Row(
