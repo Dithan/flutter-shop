@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:shop/models/product.dart';
 import 'package:shop/screens/cart_page.dart';
+import 'package:shop/screens/orders_page.dart';
 import 'package:shop/screens/product_detail_page.dart';
 import 'package:shop/screens/products_overview_page.dart';
 
@@ -21,5 +22,9 @@ final GoRouter appRoutes = GoRouter(routes: [
   GoRoute(
     path: '/cart-page',
     builder: (context, state) => CartPage(),
+  ),
+  GoRoute(
+    path: '/orders',
+    builder: (context, state) => OrdersPage(),
   )
 ]);
